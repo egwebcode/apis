@@ -45,6 +45,19 @@
     <script>
 document.addEventListener('contextmenu', e => e.preventDefault());
     </script>
+
+    <script>
+document.addEventListener('keydown', e => {
+  if (
+    e.key === 'F12' ||
+    (e.ctrlKey && e.shiftKey && ['I','J','C'].includes(e.key)) ||
+    (e.ctrlKey && e.key === 'U')
+  ) {
+    e.preventDefault();
+    bloquear();
+  }
+});
+    </script>
     
 </head>
 <body>
